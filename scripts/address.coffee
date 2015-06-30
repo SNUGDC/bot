@@ -9,7 +9,7 @@
 #
 # Commands:
 #   hubot 주소- 동아리방의 주소를 출력
-#   hubot address - 동아리방의 주로슬 출력
+#   hubot address - 동아리방의 주소를 출력
 
 module.exports = (robot) ->
   getAddress = () ->
