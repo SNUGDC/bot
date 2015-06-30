@@ -14,3 +14,6 @@ module.exports = (robot) ->
 
         robot.hear /도모 (.*)=상 (.*)데스/i, (res) ->
                 res.send "도모 #{res.match[2]}=상 #{res.match[1]}데스"
+        
+        robot.hear /하이쿠를 읊어라/i, (res) ->
+                res.send "아이에에에! 사요나라!"
