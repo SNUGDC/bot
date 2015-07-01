@@ -15,8 +15,8 @@ _ = require 'underscore'
 module.exports = (robot) ->
   robot.respond /educast\s+(.*)/i, (res) ->
     getSearchResults res, (result) ->
-      if result.length != 0
-        res.send result[0], result[1], result[2]
+      if result
+        res.send result
       else res.send "검색 결과가 없습니다."
 
 getSearchResults = (res, callback) ->
@@ -31,6 +31,6 @@ parseResult = (res, body) ->
   resultObj = JSON.parse body
   randomSearchResultObj = _.sample(resultObj.results)
   if randomSearchResultObj
-    [randomSearchResultObj.name, randomSearchResultObj.image.medium, randomSearchResultObj.url]
+    randomSearchResultObj.url
   else
-    []
+    null
