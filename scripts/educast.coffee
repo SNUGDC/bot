@@ -14,6 +14,7 @@ _ = require 'underscore'
 
 module.exports = (robot) ->
   robot.respond /educast\s+(.*)/i, (res) ->
+    return res.send 'https://beta.educast.pro/static/image/category-header/이성찬.jpg', 'https://beta.educast.pro/search/?q=이성찬' if res.match[1] == '이성찬'
     getSearchResults res, (result) ->
       if result
         res.send result
