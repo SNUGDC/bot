@@ -21,5 +21,4 @@ module.exports = (robot) ->
                 res.send "아이에에에! 사요나라!"
 
         robot.hear /폭발사산/i, (res) ->
-                imageMe res, '폭발사산', (url) ->
-                        res.send url
+                res.send 'http://pds27.egloos.com/pds/201405/19/00/e0060200_5379f541e7788.png'
