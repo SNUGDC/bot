@@ -8,6 +8,8 @@
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
+imageMe = require '../src/imageMe'
+
 module.exports = (robot) ->
         robot.hear /Open the pod bay doors/i, (res) ->
                 res.send "HAL: I'm sorry, Dave. I'm afraid I can't do that."
@@ -17,3 +19,7 @@ module.exports = (robot) ->
         
         robot.hear /하이쿠를 읊어라/i, (res) ->
                 res.send "아이에에에! 사요나라!"
+
+        robot.hear /폭발사산/i, (res) ->
+                imageMe res, '폭발사산', (url) ->
+                        res.send url
