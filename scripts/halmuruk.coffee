@@ -22,8 +22,7 @@ module.exports = (robot) ->
 
 showMuRuk = (msg) ->
   imageMe msg, '할무룩', (url) ->
-    msg.send 'Hal 무룩...'
-    msg.send url
+    msg.send 'Hal 무룩...', url
 
 
 # below is copied from hubot-google-images
